@@ -1,0 +1,59 @@
+{
+  "basename": "github_copilot",
+  "identity": {
+    "title": "AI Use Case: GitHub Copilot – Developer Velocity",
+    "strategicStatement": "GitHub Copilot is a strategic imperative for EDDNext, accelerating software delivery and modernizing engineering practice across the enterprise.",
+    "useCaseName": "GitHub Copilot – AI pair programmer"
+  },
+  "initiative": {
+    "overview": "POC to evaluate GitHub Copilot Enterprise across EDDNext engineering teams, assessing its ability to close the software delivery-speed gap and modernize how code is written, reviewed, and shipped.",
+    "capabilities": [
+      "AI pair programmer: real-time code completion and whole-function suggestions in the IDE.",
+      "Copilot Chat for in-editor Q&A, code explanation, and automated test generation.",
+      "Agent mode: autonomously researches the repository, plans changes, and opens pull requests for review.",
+      "Enterprise fine-tuning on the organization's private codebase, conventions, and internal libraries."
+    ],
+    "scope": [
+      "Pilot with a defined developer cohort on GitHub Enterprise Cloud using managed Copilot accounts.",
+      "Establish policy controls, secret scanning, and acceptable-use governance.",
+      "Measure velocity and quality metrics, then evaluate results & refine the rollout."
+    ]
+  },
+  "solutionPath": { "selected": "Buy", "selectedLabel": "Buy (SaaS subscription – GitHub Enterprise)" },
+  "businessValue": {
+    "rating": "High",
+    "description": "GitHub Copilot turns everyday coding into an AI-assisted workflow. Controlled studies show up to 55% faster task completion and roughly 75% shorter pull-request cycle time, enabling EDDNext to ship modernization work faster and with higher developer satisfaction."
+  },
+  "feasibility": {
+    "overall": "High",
+    "factors": [
+      { "factor": "AI capabilities required to implement", "rating": "Low" },
+      { "factor": "Risk", "rating": "Medium" },
+      { "factor": "Stakeholder support", "rating": "High" }
+    ]
+  },
+  "risks": {
+    "overall": "Med",
+    "factors": [
+      { "factor": "Insecure / vulnerable code suggestions", "rating": "Med" },
+      { "factor": "Data privacy & IP governance", "rating": "High" },
+      { "factor": "Shadow AI / unmanaged accounts", "rating": "Med" }
+    ]
+  },
+  "otherBenefits": {
+    "heading": "Success Metrics",
+    "items": [
+      "Reduction in development cycle time (PR lead time)",
+      "Pull requests merged per developer",
+      "Developer satisfaction and adoption rate",
+      "Code review turnaround and build success rate"
+    ]
+  },
+  "complexity": {
+    "dependency": "Relies on GitHub Enterprise Cloud and managed Copilot licensing.",
+    "complexity": "Requires governance guardrails: secret scanning, policy controls, and human review of AI-generated code."
+  },
+  "team": { "businessSponsor": "TBD", "itSponsor": "TBD", "projectManager": "TBD", "sme": "TBD" },
+  "timeline": { "year": "2026", "startMonth": "Jul", "endMonth": "Dec", "badge": "TBD" },
+  "design": { "reskin": false, "primaryHex": "#2576B7", "headerFont": "Montserrat SemiBold", "bodyFont": "Roboto Condensed Light" }
+}
