@@ -1,0 +1,193 @@
+{
+  "templateName": "AI Use Case One-Pager",
+  "templateSource": "MS Plan Designer AI Use Case 1.pptx",
+  "templateVersion": "1.0",
+  "description": "Single-slide AI use case summary. Fill the 'value' of each field programmatically. Fields with 'allowedValues' are controlled vocabularies; fields with 'items' are repeatable lists.",
+  "slide": {
+    "dimensions": { "widthEmu": 12192000, "heightEmu": 6858000, "aspectRatio": "16:9" },
+    "layoutName": "2_Colours"
+  },
+  "fields": {
+    "header": {
+      "title": {
+        "shapeName": "Title 1",
+        "label": "Slide Title",
+        "type": "string",
+        "value": "AI Use Case: Microsoft Plan Designer – Project Acceleration",
+        "format": "AI Use Case: {solutionName} – {focus}"
+      },
+      "strategicStatement": {
+        "shapeName": "Title 1",
+        "label": "Strategic Statement / Subtitle",
+        "type": "string",
+        "value": "Plan Designer is a strategic imperative for EDDNext aiming to maximize enterprise velocity and scale their low-code development initiatives."
+      },
+      "useCaseTag": {
+        "shapeName": "Group 2 / TextBox 74",
+        "label": "Section Tag",
+        "type": "string",
+        "value": "AI USE CASE",
+        "editable": false
+      },
+      "useCaseName": {
+        "shapeName": "Group 2 / Rectangle 6",
+        "label": "AI Use Case Name",
+        "type": "string",
+        "value": "Plan Designer– AI-assisted project planning"
+      }
+    },
+    "initiativeDescription": {
+      "shapeName": "Group 11 / Rectangle 10",
+      "label": "Initiative Description",
+      "type": "richText",
+      "subFields": {
+        "overview": {
+          "type": "string",
+          "value": "POC to evaluate Microsoft Plan Designer to assess ability to address the \"Velocity Gap\" severely restricts our organization's responsiveness and speed in executing digital initiatives."
+        },
+        "capabilities": {
+          "type": "list",
+          "items": [
+            "AI-driven tool to convert business ideas into structured solution plans.",
+            "Generates apps, workflows, data models, and user stories automatically."
+          ]
+        },
+        "scopeOfImplementation": {
+          "type": "list",
+          "heading": "Scope of Implementation:",
+          "items": [
+            "Integration with existing EDDNext Environment with the creation of a new Sandbox in the Microsoft ecosystem.",
+            "Evaluate result & refine approach"
+          ]
+        }
+      }
+    },
+    "solutionPath": {
+      "shapeName": "Rectangle 21 / Table 31",
+      "label": "Solution Path",
+      "type": "singleSelect",
+      "allowedValues": ["Buy", "Build", "Extend"],
+      "options": [
+        { "value": "Buy", "displayLabel": "Buy (already part of Power Platform)", "selected": true },
+        { "value": "Build", "displayLabel": "Build", "selected": false },
+        { "value": "Extend", "displayLabel": "Extend", "selected": false }
+      ]
+    },
+    "businessValue": {
+      "shapeName": "Group 16",
+      "label": "Business Value",
+      "rating": {
+        "shapeName": "Rectangle 15",
+        "type": "rating",
+        "allowedValues": ["High", "Medium", "Low"],
+        "value": "High"
+      },
+      "description": {
+        "shapeName": "Text Placeholder 2",
+        "type": "string",
+        "value": "Microsoft Plan Designer transforms app development into an AI-assisted, low-code experience, enabling EDDNext to deliver tailored business solutions faster, with less effort and greater accuracy."
+      }
+    },
+    "feasibility": {
+      "shapeName": "Group 39 + Table 14",
+      "label": "Feasibility",
+      "overallRating": {
+        "shapeName": "Rectangle 33",
+        "type": "rating",
+        "allowedValues": ["High", "Medium", "Low"],
+        "value": "High"
+      },
+      "factors": {
+        "type": "ratedList",
+        "factorAllowedValues": ["High", "Medium", "Low"],
+        "items": [
+          { "factor": "AI capabilities required to implement", "rating": "Medium" },
+          { "factor": "Risk", "rating": "Medium" },
+          { "factor": "Stakeholder support", "rating": "High" }
+        ]
+      }
+    },
+    "risks": {
+      "shapeName": "Group 40 + Table 17",
+      "label": "Risks",
+      "overallRating": {
+        "shapeName": "Rectangle 34",
+        "type": "rating",
+        "allowedValues": ["High", "Med", "Low"],
+        "value": "Low"
+      },
+      "factors": {
+        "type": "ratedList",
+        "factorAllowedValues": ["High", "Med", "Low"],
+        "items": [
+          { "factor": "Incomplete data", "rating": "Med" },
+          { "factor": "In-house talent", "rating": "Low" },
+          { "factor": "Integration risks", "rating": "High" }
+        ]
+      }
+    },
+    "otherExpectedBenefits": {
+      "shapeName": "Group 18 / Text Placeholder 2",
+      "label": "Other Expected Benefits",
+      "subFields": {
+        "successMetrics": {
+          "type": "list",
+          "heading": "Success Metrics",
+          "items": [
+            "Reduction in development time",
+            "Numbers of solutions created",
+            "User satisfaction and adoption rates"
+          ]
+        }
+      }
+    },
+    "complexityDependencies": {
+      "shapeName": "Group 38 / Rectangle 5",
+      "label": "Complexity/Dependencies",
+      "subFields": {
+        "dependency": { "type": "string", "value": "Relies on Copilot AI." },
+        "complexity": { "type": "string", "value": "AI suggestions may require iterative refinement and stakeholder validation." }
+      }
+    },
+    "projectTeam": {
+      "shapeName": "Group 35 / Rectangle 13",
+      "label": "Project Team",
+      "type": "object",
+      "roles": {
+        "businessSponsor": { "label": "Business Sponsor", "type": "string", "value": "Adam Brunner" },
+        "itSponsor": { "label": "IT Sponsor", "type": "string", "value": "Adam Brunner" },
+        "projectManager": { "label": "PM", "type": "string", "value": "Joseph Ledoux" },
+        "subjectMatterExpert": { "label": "SME", "type": "string", "value": "Joseph Ledoux" }
+      }
+    },
+    "desiredProjectTimelineRange": {
+      "shapeName": "Group 12 + Pentagon 89 + Table 7",
+      "label": "Desired Project Timeline Range",
+      "summaryBadge": {
+        "shapeName": "Pentagon 89",
+        "type": "string",
+        "value": "TBD"
+      },
+      "timeline": {
+        "shapeName": "Table 7",
+        "type": "ganttRow",
+        "year": { "type": "string", "value": "2026" },
+        "months": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+        "selectedMonths": {
+          "description": "Booleans indicating which months are highlighted/shaded in the timeline bar. Template currently shades Jan-Aug.",
+          "type": "booleanArrayByMonth",
+          "value": {
+            "Jan": true, "Feb": true, "Mar": true, "Apr": true,
+            "May": true, "Jun": true, "Jul": true, "Aug": true,
+            "Sep": false, "Oct": false, "Nov": false, "Dec": false
+          }
+        }
+      }
+    }
+  },
+  "enums": {
+    "rating": ["High", "Medium", "Low"],
+    "riskRating": ["High", "Med", "Low"],
+    "solutionPath": ["Buy", "Build", "Extend"]
+  }
+}
