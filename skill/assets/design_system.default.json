@@ -1,0 +1,183 @@
+{
+  "designSystemName": "AI Use Case One-Pager — Design System",
+  "version": "1.0",
+  "derivedFrom": "MS Plan Designer AI Use Case 1.pptx (theme1.xml + slide1.xml)",
+  "units": {
+    "position": "inches",
+    "fontSize": "points",
+    "note": "1 inch = 914400 EMU. PowerPoint native unit is EMU; inches used here for readability."
+  },
+
+  "canvas": {
+    "widthIn": 13.333,
+    "heightIn": 7.5,
+    "widthEmu": 12192000,
+    "heightEmu": 6858000,
+    "aspectRatio": "16:9",
+    "backgroundColor": "#FFFFFF"
+  },
+
+  "colorPalette": {
+    "theme": {
+      "dk1_text": "#494949",
+      "lt1_background": "#FFFFFF",
+      "dk2": "#494949",
+      "lt2": "#FFFFFF",
+      "accent1_primaryBlue": "#2576B7",
+      "accent2_purple": "#5E3391",
+      "accent3_gold": "#EFC351",
+      "accent4_green": "#289D48",
+      "accent5_red": "#B3242E",
+      "accent6_orange": "#F17926",
+      "hyperlink": "#2476B7",
+      "followedHyperlink": "#16476E"
+    },
+    "semantic": {
+      "primary": "#2576B7",
+      "headerBarText": "#FFFFFF",
+      "bodyText": "#494949",
+      "subtitleText": "#2576B7",
+      "cardBackground": "#FFFFFF",
+      "cardBorder": "#2576B7",
+      "ratingBadgeFill": "#F2F2F2",
+      "ratingBadgeText": "#2576B7",
+      "pageBackground": "#FFFFFF"
+    },
+    "ratingColors": {
+      "comment": "Recommended fills if you want to color-code rating badges by value. Source template renders all rating badges with neutral fill + blue text; these are optional semantic overrides.",
+      "High": { "text": "#289D48", "fill": "#F2F2F2" },
+      "Medium": { "text": "#F17926", "fill": "#F2F2F2" },
+      "Med": { "text": "#F17926", "fill": "#F2F2F2" },
+      "Low": { "text": "#B3242E", "fill": "#F2F2F2" },
+      "neutralDefault": { "text": "#2576B7", "fill": "#F2F2F2" }
+    }
+  },
+
+  "gradients": {
+    "headerBar": {
+      "description": "Dark navy → primary blue diagonal gradient used on every section header bar.",
+      "type": "linear",
+      "angleDeg": 45,
+      "baseColor": "#2576B7",
+      "stops": [
+        { "pos": 0.0, "shade": 0.30, "approxHex": "#0B233A" },
+        { "pos": 0.50, "shade": 0.675, "approxHex": "#194F7B" },
+        { "pos": 1.0, "shade": 1.0, "approxHex": "#2576B7" }
+      ],
+      "cssApprox": "linear-gradient(45deg, #0B233A 0%, #194F7B 50%, #2576B7 100%)"
+    },
+    "aiUseCaseHeroBox": {
+      "description": "Tall left identity box ('AI USE CASE'). Same accent1 family, vertical orientation, dark→bright.",
+      "type": "linear",
+      "angleDeg": 45,
+      "baseColor": "#2576B7",
+      "cssApprox": "linear-gradient(160deg, #0B233A 0%, #2576B7 70%, #4F93CE 100%)"
+    },
+    "timelineProgressBar": {
+      "description": "Horizontal gantt fill (dark→light blue) behind the 'TBD' pentagon over selected months.",
+      "type": "linear",
+      "angleDeg": 0,
+      "baseColor": "#2576B7",
+      "stops": [
+        { "pos": 0.0, "lumMod": 0.75, "approxHex": "#1B5888" },
+        { "pos": 0.50, "lumMod": 0.60, "lumOff": 0.40, "approxHex": "#7FB0DA" },
+        { "pos": 1.0, "lumMod": 0.60, "lumOff": 0.40, "approxHex": "#7FB0DA" }
+      ],
+      "cssApprox": "linear-gradient(90deg, #1B5888 0%, #7FB0DA 50%, #7FB0DA 100%)"
+    }
+  },
+
+  "typography": {
+    "fontFamilies": {
+      "themeMajor": "Calibri",
+      "themeMinor": "Calibri",
+      "sectionHeader": "Montserrat SemiBold",
+      "body": "Roboto Condensed Light",
+      "badge": "Roboto",
+      "titleFallbackStack": "Montserrat, Calibri, Arial, sans-serif",
+      "bodyFallbackStack": "'Roboto Condensed', 'Roboto Condensed Light', Arial Narrow, sans-serif"
+    },
+    "textStyles": {
+      "slideTitle": { "font": "themeMajor", "sizePt": 32, "bold": false, "color": "#494949", "case": "asTyped" },
+      "subtitle": { "font": "body", "sizePt": 16, "bold": true, "color": "#2576B7" },
+      "heroTag": { "font": "sectionHeader", "sizePt": 11, "color": "#FFFFFF", "align": "center", "case": "upper", "comment": "e.g. 'AI USE CASE'" },
+      "heroName": { "font": "themeMajor", "sizePt": 14, "color": "#FFFFFF", "align": "center", "comment": "use case name inside hero box" },
+      "sectionHeader": { "font": "sectionHeader", "sizePt": 11, "color": "#FFFFFF", "align": "left", "case": "upper", "comment": "renders white on the navy header-bar gradient" },
+      "ratingBadge": { "font": "sectionHeader", "sizePt": 10.5, "color": "#2576B7", "align": "center", "case": "upper" },
+      "bodyText": { "font": "body", "sizePt": 11, "color": "#494949", "lineSpacing": 1.0 },
+      "bodyTextLarge": { "font": "body", "sizePt": 12, "color": "#494949", "comment": "right-column cards use 12pt" },
+      "tableCell": { "font": "body", "sizePt": 11, "color": "#494949" },
+      "tableRatingCell": { "font": "body", "sizePt": 11, "bold": true, "color": "#494949", "align": "right" },
+      "timelineYear": { "font": "body", "sizePt": 11, "bold": true, "color": "#494949", "align": "center" },
+      "timelineMonth": { "font": "body", "sizePt": 10, "color": "#494949", "align": "center" },
+      "pentagonBadge": { "font": "badge", "sizePt": 12, "bold": true, "color": "#FFFFFF", "align": "center" }
+    }
+  },
+
+  "components": {
+    "card": {
+      "description": "Standard content panel: white body with a 1.5pt accent1 border and a navy gradient header bar across the top.",
+      "fill": "#FFFFFF",
+      "border": { "color": "#2576B7", "weightPt": 1.5 },
+      "cornerRadius": 0,
+      "headerBar": {
+        "heightIn": 0.35,
+        "gradientRef": "gradients.headerBar",
+        "textStyleRef": "typography.textStyles.sectionHeader",
+        "textInsetLeftIn": 0.1
+      },
+      "bodyPadding": { "topIn": 0.08, "leftIn": 0.1, "rightIn": 0.1, "bottomIn": 0.08 }
+    },
+    "ratingBadge": {
+      "description": "Small pill at the right edge of a header bar showing an overall rating (HIGH/LOW etc.).",
+      "widthIn": 0.787,
+      "heightIn": 0.276,
+      "fill": "#F2F2F2",
+      "textStyleRef": "typography.textStyles.ratingBadge",
+      "anchor": "headerBarRightInset",
+      "rightInsetIn": 0.1
+    },
+    "heroBox": {
+      "description": "Tall identity tile on the far left. Solid/gradient blue, white centered text, two stacked text zones (tag + name).",
+      "gradientRef": "gradients.aiUseCaseHeroBox",
+      "border": { "color": "#F17926", "weightPt": 0, "comment": "theme assigns accent6 outline; effectively borderless in render" },
+      "tagZone": { "textStyleRef": "typography.textStyles.heroTag", "vAlign": "top" },
+      "nameZone": { "textStyleRef": "typography.textStyles.heroName", "vAlign": "middle" }
+    },
+    "ratingTable": {
+      "description": "Two-column table: factor label (left) + rating value (right, bold). No visible outer border; thin row separators.",
+      "columns": [
+        { "key": "factor", "widthPct": 70, "align": "left", "styleRef": "typography.textStyles.tableCell" },
+        { "key": "rating", "widthPct": 30, "align": "right", "styleRef": "typography.textStyles.tableRatingCell" }
+      ],
+      "rowHeightIn": 0.351,
+      "rowSeparator": { "color": "#D9D9D9", "weightPt": 0.5 },
+      "cellFill": "#FFFFFF"
+    },
+    "solutionPathTable": {
+      "description": "Single-column option list. Selected option has a grey fill; unselected options have a pale-blue tint fill.",
+      "columns": [ { "key": "displayLabel", "widthPct": 100, "align": "left", "styleRef": "typography.textStyles.tableCell" } ],
+      "rowHeightIn": 0.351,
+      "selectedRowFill": "#D9D9D9",
+      "unselectedRowFill": "#DCE6F1",
+      "rowSeparator": { "color": "#FFFFFF", "weightPt": 1.0 }
+    },
+    "timeline": {
+      "description": "12-month gantt. Header row spans the year; second row labels months; third row holds the progress bar over selected months with the TBD pentagon centered on it.",
+      "yearRow": { "heightIn": 0.23, "fill": "#FFFFFF", "styleRef": "typography.textStyles.timelineYear", "spanAllMonths": true },
+      "monthRow": { "heightIn": 0.23, "fill": "#F2F2F2", "styleRef": "typography.textStyles.timelineMonth" },
+      "barRow": { "heightIn": 0.23, "fill": "#FFFFFF" },
+      "progressBar": { "gradientRef": "gradients.timelineProgressBar", "shape": "rightArrow", "vAlign": "middle" },
+      "pentagonBadge": { "gradientRef": "gradients.timelineProgressBar", "textStyleRef": "typography.textStyles.pentagonBadge", "shape": "pentagon", "centeredOnBar": true },
+      "gridLine": { "color": "#BFBFBF", "weightPt": 0.5 }
+    },
+    "connectorLine": {
+      "description": "Thin decorative accent1 line linking grouped cards (hero→description, business value→benefits, feasibility→complexity).",
+      "color": "#2576B7",
+      "weightPt": 1.5,
+      "style": "solid"
+    }
+  },
+
+  "iconography": { "used": false, "note": "Template uses no icons; structure is type + color only." }
+}

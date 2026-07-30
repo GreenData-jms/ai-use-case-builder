@@ -1,0 +1,137 @@
+{
+  "layoutName": "AI Use Case One-Pager — Layout Map",
+  "version": "1.0",
+  "units": "inches",
+  "canvas": { "widthIn": 13.333, "heightIn": 7.5, "widthEmu": 12192000, "heightEmu": 6858000 },
+  "usage": "Each block places a region from ai_use_case_template.json onto the canvas and styles it via ai_use_case_design_system.json. 'fieldRef' = JSON path into the template; 'component' = design-system component; x/y/w/h are top-left origin in inches.",
+
+  "macroGrid": {
+    "description": "Logical structure beneath the absolute coordinates. Three horizontal bands; the middle/left form a 3-column body, the right side carries timeline + value/benefit + complexity/team.",
+    "headerBand": { "yIn": 0.39, "heightIn": 1.39, "contains": ["title", "subtitle"] },
+    "bodyBands": {
+      "row1_yIn": 1.924,
+      "row2_yIn": 3.6,
+      "row3_yIn": 5.591,
+      "rowHeightApproxIn": 1.4
+    },
+    "columns": {
+      "col1_leftIn": 0.29, "col1_widthIn": 2.06,
+      "col2_leftIn": 2.63, "col2_widthIn": 3.97,
+      "col3_leftIn": 6.83, "col3_widthIn": 3.08,
+      "col4_leftIn": 10.25, "col4_widthIn": 2.81
+    }
+  },
+
+  "blocks": [
+    {
+      "id": "title",
+      "fieldRef": "fields.header.title",
+      "component": "text:slideTitle",
+      "x": 0.411, "y": 0.391, "w": 12.654, "h": 1.379
+    },
+    {
+      "id": "subtitle",
+      "fieldRef": "fields.header.strategicStatement",
+      "component": "text:subtitle",
+      "x": 0.353, "y": 1.03, "w": 12.809, "h": 0.746
+    },
+    {
+      "id": "heroBox",
+      "fieldRef": ["fields.header.useCaseTag", "fields.header.useCaseName"],
+      "component": "heroBox",
+      "x": 0.288, "y": 1.924, "w": 2.057, "h": 1.733,
+      "subZones": {
+        "tag": { "x": 0.288, "y": 1.978, "w": 1.989, "h": 0.292, "fieldRef": "fields.header.useCaseTag" },
+        "name": { "x": 0.39, "y": 2.336, "w": 1.792, "h": 1.069, "fieldRef": "fields.header.useCaseName" }
+      }
+    },
+    {
+      "id": "initiativeDescription",
+      "fieldRef": "fields.initiativeDescription",
+      "component": "card",
+      "x": 2.628, "y": 1.924, "w": 3.968, "h": 3.42,
+      "header": { "label": "Initiative Description", "x": 2.628, "y": 1.924, "w": 3.969, "h": 0.368 },
+      "body": { "x": 2.7, "y": 2.239, "w": 3.802, "h": 3.067, "bodyTextStyle": "text:bodyText", "listStyle": "bulleted", "nestedListIndentIn": 0.25 }
+    },
+    {
+      "id": "solutionPath",
+      "fieldRef": "fields.solutionPath",
+      "component": "solutionPathTable",
+      "header": { "label": "Solution Path", "x": 0.339, "y": 3.916, "w": 2.008, "h": 0.354 },
+      "table": { "x": 0.356, "y": 4.315, "w": 1.989, "h": 1.053, "rows": 3 }
+    },
+    {
+      "id": "risks",
+      "fieldRef": "fields.risks",
+      "component": "ratingTable",
+      "header": { "label": "Risks", "x": 0.339, "y": 5.591, "w": 2.008, "h": 0.354 },
+      "ratingBadge": { "fieldRef": "fields.risks.overallRating", "x": 1.505, "y": 5.628, "w": 0.787, "h": 0.276 },
+      "table": { "fieldRef": "fields.risks.factors", "x": 0.349, "y": 5.948, "w": 1.989, "h": 1.053, "rows": 3 }
+    },
+    {
+      "id": "desiredProjectTimeline",
+      "fieldRef": "fields.desiredProjectTimelineRange",
+      "component": "card+timeline",
+      "x": 6.884, "y": 1.924, "w": 6.158, "h": 1.466,
+      "header": { "label": "Desired Project Timeline Range", "x": 6.885, "y": 1.924, "w": 6.158, "h": 0.354 },
+      "timelineTable": { "fieldRef": "fields.desiredProjectTimelineRange.timeline", "x": 7.133, "y": 2.459, "w": 5.597, "h": 0.69, "monthColumns": 12 },
+      "pentagonBadge": { "fieldRef": "fields.desiredProjectTimelineRange.summaryBadge", "x": 8.525, "y": 2.93, "w": 2.365, "h": 0.163, "note": "x/w follow selectedMonths span; recompute when months change. Pentagon centered over shaded month cells." }
+    },
+    {
+      "id": "businessValue",
+      "fieldRef": "fields.businessValue",
+      "component": "card",
+      "x": 6.827, "y": 3.601, "w": 3.081, "h": 1.792,
+      "header": { "label": "Business Value", "x": 6.925, "y": 3.61, "w": 3.071, "h": 0.354 },
+      "ratingBadge": { "fieldRef": "fields.businessValue.rating", "x": 9.118, "y": 3.665, "w": 0.787, "h": 0.276 },
+      "body": { "fieldRef": "fields.businessValue.description", "x": 6.939, "y": 3.985, "w": 2.866, "h": 1.417, "bodyTextStyle": "text:bodyTextLarge" }
+    },
+    {
+      "id": "otherExpectedBenefits",
+      "fieldRef": "fields.otherExpectedBenefits",
+      "component": "card",
+      "x": 10.251, "y": 3.623, "w": 2.813, "h": 1.731,
+      "header": { "label": "Other Expected Benefits", "x": 10.263, "y": 3.624, "w": 2.803, "h": 0.354 },
+      "body": { "fieldRef": "fields.otherExpectedBenefits.subFields.successMetrics", "x": 10.298, "y": 4.095, "w": 2.683, "h": 1.228, "bodyTextStyle": "text:bodyTextLarge", "listStyle": "bulleted", "headingFirstLine": true }
+    },
+    {
+      "id": "feasibility",
+      "fieldRef": "fields.feasibility",
+      "component": "card+ratingTable",
+      "x": 2.638, "y": 5.591, "w": 3.946, "h": 1.413,
+      "header": { "label": "Feasibility", "x": 2.638, "y": 5.616, "w": 3.947, "h": 0.337 },
+      "ratingBadge": { "fieldRef": "fields.feasibility.overallRating", "x": 5.75, "y": 5.639, "w": 0.787, "h": 0.276 },
+      "table": { "fieldRef": "fields.feasibility.factors", "x": 2.638, "y": 5.968, "w": 3.926, "h": 1.053, "rows": 3 }
+    },
+    {
+      "id": "complexityDependencies",
+      "fieldRef": "fields.complexityDependencies",
+      "component": "card",
+      "x": 6.879, "y": 5.591, "w": 3.081, "h": 1.393,
+      "header": { "label": "Complexity/Dependencies", "x": 6.88, "y": 5.616, "w": 3.076, "h": 0.337 },
+      "body": { "x": 6.893, "y": 5.959, "w": 3.063, "h": 0.869, "bodyTextStyle": "text:bodyTextLarge", "listStyle": "bulleted" }
+    },
+    {
+      "id": "projectTeam",
+      "fieldRef": "fields.projectTeam",
+      "component": "card",
+      "x": 10.251, "y": 5.591, "w": 2.813, "h": 1.393,
+      "header": { "label": "Project Team", "x": 10.263, "y": 5.615, "w": 2.803, "h": 0.337 },
+      "body": { "x": 10.346, "y": 6.051, "w": 2.589, "h": 0.915, "bodyTextStyle": "text:bodyTextLarge", "listStyle": "labeledLines", "labelFormat": "{label}: {value}" }
+    }
+  ],
+
+  "decorativeConnectors": [
+    { "id": "conn_hero_to_desc", "component": "connectorLine", "x": 2.13, "y": 2.124, "w": 0.621, "h": 0.0, "links": ["heroBox", "initiativeDescription"] },
+    { "id": "conn_value_to_benefits", "component": "connectorLine", "x": 8.999, "y": 3.792, "w": 2.249, "h": 0.0, "links": ["businessValue", "otherExpectedBenefits"] },
+    { "id": "conn_feas_to_complexity", "component": "connectorLine", "x": 5.362, "y": 5.802, "w": 2.249, "h": 0.0, "links": ["feasibility", "complexityDependencies"] }
+  ],
+
+  "compositionRules": {
+    "textOverflow": "Body cards are fixed-height; if replacement content overflows, auto-shrink body font by up to 2pt before truncating. Initiative Description card is the tallest (3.42in) and absorbs the most copy.",
+    "ratingBadgeText": "Uppercase the rating value (HIGH/MED/LOW). Optionally apply design-system ratingColors for color-coded text.",
+    "timelineRecompute": "Pentagon x and width must be recomputed from selectedMonths: bar starts at the left edge of the first true month cell and ends at the right edge of the last true month cell (each month cell ≈ 0.466in wide starting at x=7.133).",
+    "listIndent": "Top-level bullets indent 0.0in; nested bullets (e.g. Scope of Implementation children) indent 0.25in.",
+    "fieldToBlock": "Every template field maps to exactly one block id here; a composition engine iterates blocks, resolves fieldRef against the template JSON instance, and renders with the component + textStyle from the design system."
+  }
+}
